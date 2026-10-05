@@ -1,0 +1,157 @@
+.main {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: var(--space-4xl) 0 var(--space-2xl);
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-ivory) 100%);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-md);
+}
+
+.subtitle {
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: var(--space-md) auto 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  padding: var(--space-2xl) 0;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-parchment);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-parchment);
+}
+
+.cardIcon {
+  width: 52px;
+  height: 52px;
+  background: var(--color-cream);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* The image is absolutely positioned (next/image fill), so pad the img itself */
+.cardIcon img {
+  padding: 6px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--color-charcoal);
+  margin-bottom: 0.2rem;
+}
+
+.cardAge {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.prizesTable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.prizeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-warm-white);
+}
+
+.prizeRowFirst {
+  background: linear-gradient(135deg, rgba(196, 163, 90, 0.1), rgba(212, 148, 76, 0.06));
+  border: 1px solid rgba(196, 163, 90, 0.2);
+}
+
+.prizeIcon {
+  font-size: 1.5rem;
+}
+
+.prizePosition {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-light);
+  flex: 1;
+}
+
+.prizeAmount {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-heading);
+  color: var(--color-charcoal);
+}
+
+.info {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  margin: var(--space-md) 0 var(--space-4xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-parchment);
+}
+
+.info h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-lg);
+}
+
+.info ul {
+  padding-left: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.info li {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  line-height: var(--lh-relaxed);
+}
+
+.info li::marker {
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

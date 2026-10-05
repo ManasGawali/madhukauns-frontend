@@ -1,0 +1,235 @@
+.main {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: var(--space-4xl) 0 var(--space-2xl);
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-ivory) 100%);
+}
+
+.headerIconWrap {
+  width: 136px;
+  height: 136px;
+  padding: 8px;
+  margin: 0 auto var(--space-md);
+  border-radius: 24px;
+  background: #f4efe4;
+  box-sizing: border-box;
+}
+
+.headerIcon {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-md);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl) 0 var(--space-4xl);
+  align-items: start;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Details Card */
+.detailsCard, .rulesCard, .venueCard {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-parchment);
+}
+
+.detailsCard h3, .rulesCard h3, .venueCard h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xl);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.detailIcon {
+  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+.detailLabel {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.15rem;
+}
+
+.detailValue {
+  display: block;
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  font-weight: var(--fw-medium);
+}
+
+/* Rules */
+.rulesList {
+  padding-left: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.rulesList li {
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-light);
+}
+
+.rulesList li::marker {
+  color: var(--color-gold);
+  font-weight: var(--fw-semibold);
+}
+
+.rulesNote {
+  margin-top: var(--space-xl);
+  padding: var(--space-md);
+  background: rgba(196, 163, 90, 0.06);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+}
+
+.rulesNote a {
+  color: var(--color-rosewood);
+  font-weight: var(--fw-medium);
+}
+
+/* Venue */
+.venueCard p {
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-light);
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-xl));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.prizeCard, .registerCard {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-parchment);
+}
+
+.prizeCard h3, .registerCard h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-lg);
+}
+
+.prizeList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.prizeItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-warm-white);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+}
+
+.prizeItem span:first-child {
+  font-size: 1.25rem;
+}
+
+.prizeItem strong {
+  margin-left: auto;
+  color: var(--color-charcoal);
+  font-family: var(--font-heading);
+}
+
+.prizeNote {
+  margin-top: var(--space-md);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: var(--lh-relaxed);
+}
+
+/* Register Card */
+.registerCard {
+  border-color: var(--color-gold-muted);
+  background: linear-gradient(135deg, white, var(--color-warm-white));
+}
+
+.registerDeadline {
+  font-size: var(--fs-sm);
+  color: var(--color-saffron-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.registerFee {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+}
+
+.registerNote {
+  margin-top: var(--space-md);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}

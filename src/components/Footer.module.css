@@ -1,0 +1,169 @@
+.footer {
+  background: var(--color-charcoal);
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.decorativeLine {
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--color-rosewood), 
+    var(--color-gold), 
+    var(--color-saffron), 
+    var(--color-gold), 
+    var(--color-rosewood)
+  );
+}
+
+.container {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl) var(--space-2xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.brand {}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.logoIcon {
+  font-size: 1.75rem;
+}
+
+.logoTitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-gold);
+  line-height: 1.1;
+}
+
+.logoSubtitle {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.brandDesc {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.columnTitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  transition: color var(--transition-fast);
+  padding: 0.15rem 0;
+}
+
+.footerLink:hover {
+  color: var(--color-gold-light);
+}
+
+.footerText {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.15rem 0;
+}
+
+.contactItem {
+  display: flex;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+.contactItem a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-fast);
+}
+
+.contactItem a:hover {
+  color: var(--color-gold-light);
+}
+
+.contactIcon {
+  flex-shrink: 0;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: var(--space-xl);
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.ornamentLine {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 163, 90, 0.4), transparent);
+}
+
+.ornamentDiamond {
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+}
+
+.copyright {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: var(--space-xs);
+}
+
+.venue {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .container {
+    padding: var(--space-2xl) var(--space-md) var(--space-lg);
+  }
+}
