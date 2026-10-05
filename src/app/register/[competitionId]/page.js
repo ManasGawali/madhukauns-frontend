@@ -130,7 +130,7 @@ export default function RegisterPage() {
     setPaymentError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/payments/initiate', {
+      const response = await fetch('https://kalashree-classes-backend.onrender.com/api/payments/initiate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
