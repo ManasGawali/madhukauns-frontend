@@ -21,7 +21,7 @@ function PaymentResultContent() {
     if (status === 'PENDING' && transactionId) {
       const checkStatus = async () => {
         try {
-          const res = await fetch(`http://localhost:5000/api/payments/status/${transactionId}`);
+          const res = await fetch(`https://madhukauns-backend.onrender.com/api/payments/status/${transactionId}`);
           const data = await res.json();
           if (data.status === 'SUCCESS' || data.status === 'PAYMENT_SUCCESS') {
             setVerifiedStatus('SUCCESS');
